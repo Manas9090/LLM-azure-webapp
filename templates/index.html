@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenAI Chatbot</title>
+</head>
+<body>
+    <h1>Simple OpenAI Chatbot</h1>
+    <form method="POST">
+        <label for="user_input">You:</label>
+        <input type="text" id="user_input" name="user_input" value="{{ user_input }}" required>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if bot_reply %}
+    <p><strong>Bot:</strong> {{ bot_reply }}</p>
+    {% endif %}
+</body>
+</html>
